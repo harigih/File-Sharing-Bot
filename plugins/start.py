@@ -90,12 +90,24 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+
+                    [
+
+                        InlineKeyboardButton("𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙱𝙴", url="https://youtube.com/channel/UCf_dVNrilcT0V2R--HbYpMA")                        
+
+                    ],
+
+                    [
+
+                        InlineKeyboardButton("𝙰𝙱𝙾𝚄𝚃", callback_data = "about"),
+
+                        InlineKeyboardButton("𝙲𝙻𝙾𝚂𝙴", callback_data = "close")
+
+                    ]
+
                 ]
-            ]
-        )
+
+            )
         await message.reply_text(
             text = START_MSG.format(
                 first = message.from_user.first_name,
